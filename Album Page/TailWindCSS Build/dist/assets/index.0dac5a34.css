@@ -464,14 +464,8 @@ video {
 .overflow-hidden {
   overflow: hidden;
 }
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
 .overflow-x-scroll {
   overflow-x: scroll;
-}
-.overflow-y-scroll {
-  overflow-y: scroll;
 }
 .rounded-full {
   border-radius: 9999px;
@@ -703,7 +697,7 @@ a:active {
 .albumartpage {
   box-shadow: 0 15px 50px -15px #ebe6e6;
 }
-@media (min-width: 400px) and (max-width: 1024px) {
+@media (min-width: 360px) and (max-width: 1024px) {
   .searchinput {
     transform: translate(-100%);
     max-width: 0;
@@ -761,9 +755,18 @@ a:active {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
-@media (min-width: 400px) {
+@media (min-width: 360px) {
   .xs\:m-1 {
     margin: 0.25rem;
+  }
+  .xs\:m-4 {
+    margin: 1rem;
+  }
+  .xs\:mt-4 {
+    margin-top: 1rem;
+  }
+  .xs\:mb-4 {
+    margin-bottom: 1rem;
   }
   .xs\:mr-1 {
     margin-right: 0.25rem;
@@ -771,17 +774,29 @@ a:active {
   .xs\:flex {
     display: flex;
   }
+  .xs\:h-5 {
+    height: 1.25rem;
+  }
   .xs\:h-1\/6 {
     height: 16.666667%;
   }
   .xs\:h-36 {
     height: 9rem;
   }
-  .xs\:w-1\/3 {
-    width: 33.333333%;
+  .xs\:h-full {
+    height: 100%;
+  }
+  .xs\:w-full {
+    width: 100%;
   }
   .xs\:w-36 {
     width: 9rem;
+  }
+  .xs\:w-4 {
+    width: 1rem;
+  }
+  .xs\:flex-row {
+    flex-direction: row;
   }
   .xs\:flex-col {
     flex-direction: column;
@@ -789,8 +804,8 @@ a:active {
   .xs\:flex-nowrap {
     flex-wrap: nowrap;
   }
-  .xs\:items-start {
-    align-items: flex-start;
+  .xs\:items-center {
+    align-items: center;
   }
   .xs\:justify-center {
     justify-content: center;
@@ -801,17 +816,21 @@ a:active {
   .xs\:overflow-auto {
     overflow: auto;
   }
+  .xs\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  .xs\:overflow-x-visible {
+    overflow-x: visible;
+  }
+  .xs\:bg-black {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  }
   .xs\:p-2 {
     padding: 0.5rem;
   }
   .xs\:p-1 {
     padding: 0.25rem;
-  }
-  .xs\:pr-0 {
-    padding-right: 0;
-  }
-  .xs\:pl-0 {
-    padding-left: 0;
   }
   .xs\:pr-5 {
     padding-right: 1.25rem;
@@ -819,8 +838,29 @@ a:active {
   .xs\:pl-5 {
     padding-left: 1.25rem;
   }
+  .xs\:pr-0 {
+    padding-right: 0;
+  }
+  .xs\:pl-0 {
+    padding-left: 0;
+  }
+  .xs\:pl-2 {
+    padding-left: 0.5rem;
+  }
+  .xs\:pt-3 {
+    padding-top: 0.75rem;
+  }
+  .xs\:pt-4 {
+    padding-top: 1rem;
+  }
   .xs\:pr-3 {
     padding-right: 0.75rem;
+  }
+  .xs\:text-center {
+    text-align: center;
+  }
+  .xs\:text-\[0\.72rem\] {
+    font-size: 0.72rem;
   }
   .xs\:text-xs {
     font-size: 0.75rem;
@@ -851,14 +891,17 @@ a:active {
   .sm\:h-44 {
     height: 11rem;
   }
-  .sm\:w-1\/4 {
-    width: 25%;
+  .sm\:w-full {
+    width: 100%;
   }
   .sm\:w-48 {
     width: 12rem;
   }
   .sm\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+  .sm\:pt-0 {
+    padding-top: 0;
   }
   .sm\:pr-5 {
     padding-right: 1.25rem;
@@ -873,6 +916,9 @@ a:active {
   }
 }
 @media (min-width: 768px) {
+  .md\:m-5 {
+    margin: 1.25rem;
+  }
   .md\:flex-nowrap {
     flex-wrap: nowrap;
   }
@@ -889,6 +935,15 @@ a:active {
   .lg\:m-5 {
     margin: 1.25rem;
   }
+  .lg\:mt-3 {
+    margin-top: 0.75rem;
+  }
+  .lg\:mb-3 {
+    margin-bottom: 0.75rem;
+  }
+  .lg\:h-52 {
+    height: 13rem;
+  }
   .lg\:h-1\/4 {
     height: 25%;
   }
@@ -898,8 +953,35 @@ a:active {
   .lg\:w-1\/4 {
     width: 25%;
   }
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+  .lg\:flex-col {
+    flex-direction: column;
+  }
   .lg\:flex-wrap {
     flex-wrap: wrap;
+  }
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+  .lg\:items-center {
+    align-items: center;
+  }
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+  .lg\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  .lg\:overflow-y-scroll {
+    overflow-y: scroll;
+  }
+  .lg\:pr-3 {
+    padding-right: 0.75rem;
+  }
+  .lg\:pl-3 {
+    padding-left: 0.75rem;
   }
   .lg\:text-base {
     font-size: 1rem;
@@ -912,6 +994,13 @@ a:active {
   .lg\:font-normal {
     font-weight: 400;
   }
+  .lg\:scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .lg\:scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 @media (min-width: 1280px) {
   .xl\:m-5 {
@@ -923,11 +1012,11 @@ a:active {
   .xl\:h-56 {
     height: 14rem;
   }
-  .xl\:w-1\/6 {
-    width: 16.666667%;
-  }
   .xl\:w-72 {
     width: 18rem;
+  }
+  .xl\:w-1\/6 {
+    width: 16.666667%;
   }
   .xl\:p-3 {
     padding: 0.75rem;
